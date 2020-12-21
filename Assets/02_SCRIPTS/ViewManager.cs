@@ -12,7 +12,10 @@ public class ViewManager : MonoBehaviour
 
     void Start()
     {
-
+        mouseOrbit.target = GameObject.Find(view1.targetName).transform;
+        mouseOrbit.newRotation = Quaternion.Euler(view1.rotation);
+        mouseOrbit.newDistance = view1.distance;
+        one = true;
     }
 
     void Update()
